@@ -1,7 +1,7 @@
 export default function UserProfilePage({ }) {
   return (
     <main>
-        User profilee
+        User profile
     </main>
   )
 }
