@@ -23,6 +23,13 @@ export default function RootLayout({
             <body className={poppins.className}>
                 <Navbar />
                 {children}
+
+                <footer className="footer">
+                    <div className="ocean">
+                        <div className="wave"></div>
+                        <div className="wave"></div>
+                    </div>
+                </footer>
             </body>
         </html>
     )

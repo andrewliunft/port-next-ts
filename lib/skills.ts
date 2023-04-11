@@ -19,20 +19,20 @@ export const skills = [
     },
     {
         id: 4,
+        name: 'Project Management',
+        description: 'I have developed my project management abilities through previous roles and projects.',
+        icon: "/images/icons/management.svg"
+    },
+    {
+        id: 5,
         name: 'Problem Solving',
         description: 'My past experience has given me the ability to effectively solve problems.',
         icon: "/images/icons/solving.svg"
     },
     {
-        id: 5,
+        id: 6,
         name: 'Willing to Learn',
         description: 'I am committed to continuous learning and self-improvement.',
         icon: "/images/icons/learn.svg"
-    },
-    {
-        id: 6,
-        name: 'Project Management',
-        description: 'I have developed my project management abilities through previous roles and projects.',
-        icon: "/images/icons/management.svg"
     }
 ]

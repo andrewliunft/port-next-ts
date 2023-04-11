@@ -30,7 +30,7 @@ export default function Particles() {
                 scale={100}
                 speed={0.2}
                 noise={0.01}
-                count={400}
+                count={500}
                 color={'black'}
             />
         </>

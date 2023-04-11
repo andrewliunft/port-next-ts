@@ -18,14 +18,23 @@ export default function Projects({ projects = [], title = "My Projects" }: Props
     }
 
     return (
-        <div className="projects-section">
+        <div className="projects-section section-gap">
             <div className="projects-desc">
                 <h2 className="subtitle">{title}</h2>
                 <p>Work that I’ve done for the past {getYear()} years</p>
             </div>
            
             <Swiper
-                slides-per-view="1"
+                slidesPerView={1}
+                breakpoints={{
+                    // when window width is >= 900px
+                    900: {
+                        slidesPerView: 2,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                    }
+                }}
             >
                 { projects.map(({id, name, image, tags}: any) => 
                     <SwiperSlide key={ id } className="swipper-slide">
