@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.scss'
 import { Poppins } from 'next/font/google'
+import { UserContextProvider } from "@/components/Context"
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,15 +22,17 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={poppins.className}>
-                <Navbar />
-                {children}
+                <UserContextProvider>
+                    <Navbar />
+                    {children}
 
-                <footer className="footer">
-                    <div className="ocean">
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                    </div>
-                </footer>
+                    <footer className="footer">
+                        <div className="ocean">
+                            <div className="wave"></div>
+                            <div className="wave"></div>
+                        </div>
+                    </footer>
+                </UserContextProvider>
             </body>
         </html>
     )

@@ -184,6 +184,11 @@
         padding: 1rem;
         margin-bottom: 1rem;
 
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+
         @media (min-width: $tablet)
         {
             flex: 0 0 calc(33.333% - 1rem);
@@ -265,6 +270,11 @@
             padding: 1.5rem 1rem;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             margin-bottom: 1.5rem;
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
 
             @media (min-width: $tablet)
             {

@@ -1,5 +1,6 @@
 'use client';
 
+import { useUserContext } from "@/components/Context";
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -10,8 +11,7 @@ type NavProps = {
 
 // Top navbar
 export default function Navbar({ }: NavProps) {
-    const user = null
-    const username = null
+    const { user, username } = useUserContext()
     const pathname = usePathname()
 
     return (
