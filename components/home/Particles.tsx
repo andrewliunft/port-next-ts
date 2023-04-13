@@ -3,11 +3,12 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Center, Sparkles } from '@react-three/drei'
+import { Points } from 'three';
 
 export default function Particles() {
 
-    const particles = useRef()
-    const points = useRef()
+    const particles = useRef<Points>(null!)
+    const points = useRef<Points>(null!)
 
     useFrame((state, delta) => {
         particles.current.rotation.y -= 0.002
@@ -16,7 +17,7 @@ export default function Particles() {
     })
 
     return (
-        <>
+        <group>
             <Center>
                 <points ref={points}>
                     <boxGeometry args={[17,17,17,20,20,20]} />
@@ -33,6 +34,6 @@ export default function Particles() {
                 count={500}
                 color={'black'}
             />
-        </>
+        </group>
     )
 }

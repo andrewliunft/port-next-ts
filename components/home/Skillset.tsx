@@ -21,7 +21,7 @@ export default function Skillset({ skills = [], title = "Work Experience" }: Pro
         const tiles = skillsRef.current
         let delay = 0
 
-        tiles.forEach((tile, i) => {
+        tiles.forEach((tile: gsap.DOMTarget, i: number) => {
             const anim = gsap.fromTo(
                 tile, 
                 { 

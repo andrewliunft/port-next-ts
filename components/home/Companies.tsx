@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { IndexInfo } from "typescript";
 
 gsap.registerPlugin(ScrollTrigger); 
 
@@ -20,7 +21,7 @@ export default function CompaniesComponent({ companies = [], title = "Work Exper
         const tiles = tilesRef.current
         let delay = 0
 
-        tiles.forEach((tile, i) => {
+        tiles.forEach((tile: gsap.DOMTarget, i: IndexInfo) => {
             const anim = gsap.fromTo(
                 tile, 
                 { 

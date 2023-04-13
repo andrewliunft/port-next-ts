@@ -2,16 +2,23 @@
 
 import { Canvas } from '@react-three/fiber'
 import Particles from './Particles';
+import { Loader } from '@react-three/drei'
+import { Suspense } from 'react';
 
 export default function Experience() {
 
     return (
-        <Canvas 
-            dpr={[1, 2]} 
-            camera={{ position: [0, 0, 35], fov: 90 }}
-        >
-            <Particles />
-        </Canvas>
+        <>
+            <Canvas 
+                dpr={[1, 2]} 
+                camera={{ position: [0, 0, 35], fov: 90 }}
+            >
+                <Suspense fallback={null}>
+                    <Particles />
+                </Suspense>
+            </Canvas>
+            <Loader />
+        </>
     )
 }
 
