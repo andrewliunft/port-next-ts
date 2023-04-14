@@ -9,15 +9,19 @@ import Socials from '@/components/home/Socials'
 import { companies } from '@/lib/companies'
 import { skills } from '@/lib/skills'
 import { projects } from '@/lib/projects'
+import { siteConfig } from '@/config/site'
 
 export const metadata = {
-    title: 'Tommy Saputra',
-    description: 'A Front End Developer based in Australia.',
+    title: {
+        default: siteConfig.name,
+        template: `%s | ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
     twitter: {
         card: "summary_large_image",
-        title: 'Tommy Saputra',
-        description: 'A Front End Developer based in Australia.',
-        images: ['https://tommysaputra.com/photo.jpeg'],
+        title: siteConfig.name,
+        description: siteConfig.description,
+        images: [siteConfig.ogImage],
         creator: "@tompelsama",
     },
       icons: {
@@ -26,13 +30,13 @@ export const metadata = {
         apple: "/apple-touch-icon.png",
     },
     openGraph: {
-        title: 'Tommy Saputra',
-        description: 'A Front End Developer based in Australia.',
+        title: siteConfig.name,
+        description: siteConfig.description,
         url: 'https://tommysaputra.com',
-        siteName: 'Tommy Saputra',
+        siteName: siteConfig.name,
         images: [
           {
-            url: 'https://tommysaputra.com/photo.jpeg',
+            url: siteConfig.ogImage,
             width: 1065,
             height: 710,
           },
@@ -59,7 +63,7 @@ export default function Home() {
     return (
         <main>
             <div className='canvas-wrapper'>
-                <h1 className="title">Imagination</h1>
+                <h1 className="title-experience">Imagination</h1>
                 <Experience />
             </div>
 

@@ -1,0 +1,130 @@
+@import "/app/base";
+
+.wallet-form
+{
+    margin: 2rem auto 3rem;
+
+    &-control
+    {
+        width: 100%;
+
+        label
+        {
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        input
+        {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            margin: 0.5rem auto;
+            width: 100%;
+            text-align: center;
+
+            @media (min-width: $mobile)
+            {
+                max-width: 28rem;
+            }
+        }
+    }
+
+    &-btn
+    {
+        margin: 1rem auto 0;
+        display: block;
+    }
+}
+
+.nft-total
+{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.nfts-grid
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
+    @media (min-width: $mobile)
+    {
+        margin: 0 -0.5rem 3rem;
+        justify-content: center;
+    }
+
+    .nft-card
+    {
+        flex: 0 0 100%;
+        padding: 1rem;
+        background-color: white;
+        margin-bottom: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &:hover
+        {
+            .nft-image
+            {
+                transform: translate(-50%, 0) scale(1.1);
+            }
+        }
+
+        @media (min-width: $mobile)
+        {
+            flex: 0 0 calc(50% - 1rem);
+            margin: 0.5rem;
+        }
+
+        @media (min-width: $tablet)
+        {
+            flex: 0 0 calc(33.33333% - 1rem);
+            margin: 0.5rem;
+        }
+
+        @media (min-width: $laptop)
+        {
+            flex: 0 0 calc(25% - 1rem);
+            margin: 0.5rem;
+        }
+    }
+
+    .nft-image-holder
+    {
+        width: 100%;
+        padding-bottom: 100%;
+        background-color: $secondary-color;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nft-image
+    {
+        width: auto;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0) scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nft-name
+    {
+        font-size: 1.2rem;
+    }
+
+    .nft-collection-name
+    {
+        font-size: 1rem;
+    }
+}
+
+.nft-load-more
+{
+    text-align: center;
+    margin: 3rem 0;
+}

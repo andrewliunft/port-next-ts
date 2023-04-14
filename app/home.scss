@@ -6,8 +6,18 @@
     height: 100vh;
     margin-top: -83px;
 
-    .title
+    .title-experience
     {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        word-break: keep-all;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        letter-spacing: 10px;
+
         @media (min-width: $mobile)
         {
             font-size: 3rem;

@@ -23,7 +23,13 @@ export default function Navbar({ }: NavProps) {
                             />
                         </Link>
                     </div>
-                    
+                    <ul>
+                        <li>
+                            <Link href="/nfts">
+                                <button>NFT Viewer</button>
+                            </Link>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </header>
